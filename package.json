@@ -24,7 +24,7 @@
     "webpack-merge": "^4.1.4"
   },
   "scripts": {
-    "build": "webpack --config webpack/webpack.config.js",
+    "build": "webpack",
     "build-ts": "tsc",
     "tslint": "tslint -c tslint.json -p tsconfig.json"
   }
