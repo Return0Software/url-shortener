@@ -1,0 +1,10 @@
+version: '3.6'
+
+services:
+  mongodb:
+    image: mongodb
+    container_name: url-shortener-mongodb
+    volumes:
+      - ./docker/data/db:/data/db
+    ports:
+      - 27017:27017
