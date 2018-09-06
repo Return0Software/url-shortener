@@ -15,10 +15,17 @@
     "@types/express": "^4.16.0",
     "@types/mongoose": "^5.2.10",
     "@types/shortid": "^0.0.29",
+    "awesome-typescript-loader": "^5.2.1",
+    "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
-    "typescript": "^3.0.3"
+    "typescript": "^3.0.3",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-merge": "^4.1.4"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "webpack --config webpack/webpack.config.js",
+    "build-ts": "tsc",
+    "tslint": "tslint -c tslint.json -p tsconfig.json"
   }
 }
