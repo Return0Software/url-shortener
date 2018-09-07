@@ -1,14 +1,15 @@
 version: '3.6'
 
 services:
-  mongodb:
-    image: mongodb
-    container_name: url-shortener-mongodb
-    volumes:
-      - ./docker/data/db:/data/db
+  url-db:
+    container_name: url-db
+    build:
+      context: ./services/server/db
+      dockerfile: Dockerfile
     ports:
-      - 27017:27017
-    restart: always
+      - 27018:27017
+    volumes:
+      - ./services/server/db/data:/data/db
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root

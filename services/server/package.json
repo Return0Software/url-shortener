@@ -2,30 +2,32 @@
   "name": "url-shortener",
   "version": "1.0.0",
   "description": "r0s.io URL shortener",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "repository": "https://github.com/Return0Software/url-shortener.git",
   "license": "MPL-2.0",
   "private": true,
   "dependencies": {
+    "@types/valid-url": "^1.0.2",
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "mongoose": "^5.2.13",
-    "shortid": "^2.2.13"
+    "path-parser": "^4.2.0",
+    "shortid": "^2.2.13",
+    "uuid": "^3.3.2",
+    "valid-url": "^1.0.9"
   },
   "devDependencies": {
     "@types/express": "^4.16.0",
     "@types/mongoose": "^5.2.10",
     "@types/shortid": "^0.0.29",
-    "awesome-typescript-loader": "^5.2.1",
     "ts-node": "^7.0.1",
+    "ts-node-dev": "^1.0.0-pre.28",
     "tslint": "^5.11.0",
-    "typescript": "^3.0.3",
-    "webpack": "^4.17.2",
-    "webpack-cli": "^3.1.0",
-    "webpack-merge": "^4.1.4"
+    "typescript": "^3.0.3"
   },
   "scripts": {
-    "build": "webpack",
-    "build-ts": "tsc",
+    "dev": "ts-node-dev --no-notify src/index.ts",
+    "build": "tsc",
     "tslint": "tslint -c tslint.json -p tsconfig.json"
   }
 }
