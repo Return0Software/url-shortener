@@ -13,6 +13,12 @@ cd services/server
 yarn run dev
 ```
 
+# Bring up client
+```bash
+cd services/client
+yarn run start
+```
+
 # API
 ```bash
 # Create a new shorten url
